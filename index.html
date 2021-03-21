@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -37,22 +39,64 @@
       </nav>
 
       <header class="page-header gradient">
-            <div class="container">
-                <div class="row">
+            <div class="container pt-3">
+                <div class="row align-items-center justify-content-center">
 
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <h2>First iteration for my Portfolio!</h2>
                         <p>Hello! I'm Nicolae and here is my portfolio... in the making.
                             Come back later to find a (hopefully) beautiful website!
                         </p>
+
+                        <button type="button" class="btn btn-outline-success btn-lg">Read More</button>
+                        <button type="button" class="btn btn-outline-warning btn-lg">Play Video</button>
+
                     </div>
                     <div class="col-md-6">
                         <img src="img/placeholder3.jpg" class="float" alt="header image">
                     </div>
                 </div>
             </div>
-
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff"
+              fill-opacity="1" 
+               d="M0,128L48,117.3C96,107,192,85,288,69.3C384,53,480,43,576,53.3C672,64,768,96,864,101.3C960,107,1056,85,1152,74.7C1248,64,1344,64,1392,64L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+             </path>
+          </svg>      
       </header>
+
+      <section class="companies">
+        <div class="container text-center">
+          <div class="row g-5">
+            <div class="col-md-2"><img src="img/Companies/1.png" alt="Companies" class="img-fluid"></div>
+            <div class="col-md-2"><img src="img/Companies/2.png" alt="Companies" class="img-fluid"></div>
+            <div class="col-md-2"><img src="img/Companies/3.png" alt="Companies" class="img-fluid"></div>
+            <div class="col-md-2"><img src="img/Companies/4.png" alt="Companies" class="img-fluid"></div>
+            <div class="col-md-2"><img src="img/Companies/5.png" alt="Companies" class="img-fluid"></div>
+            <div class="col-md-2"><img src="img/Companies/6.png" alt="Companies" class="img-fluid"></div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="feature gradient">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6"><img src="img/placeholder3.jpg" alt="" class="float"></div>
+              <div class="col-md-6">
+                <h1 class="my-3">My projects featured here</h1>
+                <p class="my-4">
+                  Here is some additional text. I might have a simpler structure in the future but I'm learning the various features of bootstrap
+                </p>
+                <ul>
+                  <li>Some list</li>
+                  <li>Some list</li>
+                  <li>Some list</li>
+                  <li>Some list</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </section>
       <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
