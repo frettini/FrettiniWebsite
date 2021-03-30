@@ -3,10 +3,12 @@ body{
     height: 100%;
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
+    background-color: #fffbf2;
+
 }
 
 .gradient{
-    background: #ff7e76;
+    /* background: #ff7e76; */
     /* background: linear-gradient(180deg, rgba(150,0,0,1) 0%, rgba(255,0,0,1) 35%, rgba(255,236,198,1) 100%); */
 }
 
@@ -20,18 +22,6 @@ body{
 .cont-header{
     height:100%;
 }
-
-.item-header{
-    /* background: #aff; */
-    /* height:20rem;
-     */
-}
-
-/* .card-header{
-    height: 100%;
-    background:#00f;
-} */
-
 
 .img-header{
     height:250px;
@@ -50,4 +40,14 @@ body{
     pointer-events: auto;
     content: "";
     background-color: rgba(0,0,0,0);
+}
+
+.custom-brand{
+}
+
+.custom-brand > h1{
+}
+
+.contact{
+    background-color: #8A1E19;
 }
