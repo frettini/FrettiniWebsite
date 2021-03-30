@@ -6,7 +6,7 @@ body{
 }
 
 .gradient{
-    background: rgb(255,0,0);
+    background: #ff7e76;
     /* background: linear-gradient(180deg, rgba(150,0,0,1) 0%, rgba(255,0,0,1) 35%, rgba(255,236,198,1) 100%); */
 }
 
@@ -19,14 +19,12 @@ body{
 
 .cont-header{
     height:100%;
-    background: #8ff;
 }
 
 .item-header{
     /* background: #aff; */
     /* height:20rem;
      */
-    height: 100%;
 }
 
 /* .card-header{
@@ -36,7 +34,20 @@ body{
 
 
 .img-header{
-    max-height:250px;
+    height:250px;
     width: auto;
-    object-fit: scale-down;
+    object-fit:cover;
+    /* object-fit: scale-down; */
+}
+
+.stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: rgba(0,0,0,0);
 }
