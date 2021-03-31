@@ -15,7 +15,7 @@ body{
 .page-header{
     margin-top: 3rem;
     font-size: 1.25rem;
-    height:100%;
+    min-height:100%;
     /* color: #fff; */
 }
 
@@ -42,7 +42,13 @@ body{
     background-color: rgba(0,0,0,0);
 }
 
-.custom-brand{
+.custom-brand h1{
+    color:#fffbf2;
+    
+}
+
+.custom-brand li a:not(.dropdown-item), ul.nav li a:visited {
+    color:#fffbf2 !important;
 }
 
 .custom-brand > h1{
