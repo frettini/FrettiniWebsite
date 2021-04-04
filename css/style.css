@@ -1,9 +1,14 @@
+:root{
+    --deep-red: #8A1E19;
+    --off-white: #fffbf2;
+}
+
 html,
 body{
     height: 100%;
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
-    background-color: #fffbf2;
+    background-color: var(--off-white);
 
 }
 
@@ -13,7 +18,7 @@ body{
 }
 
 .page-header{
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     font-size: 1.25rem;
     min-height:100%;
     /* color: #fff; */
@@ -24,10 +29,9 @@ body{
 }
 
 .img-header{
-    height:250px;
+    height:225px;
     width: auto;
     object-fit:cover;
-    /* object-fit: scale-down; */
 }
 
 .stretched-link::after {
@@ -42,18 +46,42 @@ body{
     background-color: rgba(0,0,0,0);
 }
 
-.custom-brand h1{
-    color:#fffbf2;
-    
+.navbar{
+    background: var(--deep-red);
 }
 
-.custom-brand li a:not(.dropdown-item), ul.nav li a:visited {
-    color:#fffbf2 !important;
+.custom-navlink{
+    color: var(--off-white) !important;
+    /* color:blue !important; */
 }
 
-.custom-brand > h1{
+navbar-brand > h1{
+    margin-bottom:0;
+    padding-bottom:0;
+}
+
+#my-brand{
+    align-items: center;
+    color:var(--off-white) !important;
+}
+
+.custom-card{
+    border-color: var(--deep-red) !important;
+}
+
+.custom-card > .card-body{
+    background-color: var(--off-white);
+    border-color: var(--deep-red) !important;
+}
+
+.custom-card div h5{
+    border-color: var(--deep-red) !important;
 }
 
 .contact{
-    background-color: #8A1E19;
+    background-color: var(--deep-red);
+}
+
+.contact{
+    color:var(--off-white);
 }
