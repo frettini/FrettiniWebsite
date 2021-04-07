@@ -1,5 +1,5 @@
 :root{
-    --deep-red: #8A1E19;
+    --deep-red: #37c497;
     --off-white: #fffbf2;
 }
 
@@ -12,15 +12,10 @@ body{
 
 }
 
-.gradient{
-    /* background: #ff7e76; */
-    /* background: linear-gradient(180deg, rgba(150,0,0,1) 0%, rgba(255,0,0,1) 35%, rgba(255,236,198,1) 100%); */
-}
-
 .page-header{
-    /* margin-top: 3rem; */
+    margin-top: 3rem;
     font-size: 1.25rem;
-    min-height:100%;
+    min-height:95%;
     /* color: #fff; */
 }
 
@@ -48,6 +43,10 @@ body{
 
 .navbar{
     background: var(--deep-red);
+}
+
+.navbar-text{
+    color: var(--off-white) !important;
 }
 
 .custom-navlink{
