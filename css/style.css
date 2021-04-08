@@ -1,11 +1,12 @@
 :root{
-    --deep-red: #37c497;
+    --turquoise: #37c497;
     --off-white: #fffbf2;
 }
 
 html,
 body{
     height: 100%;
+    width:100%;
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     background-color: var(--off-white);
@@ -13,9 +14,11 @@ body{
 }
 
 .page-header{
-    margin-top: 3rem;
+    margin-top: 4.5rem;
     font-size: 1.25rem;
-    min-height:95%;
+    min-height:92%;
+    justify-content: center;
+    align-items: center;
     /* color: #fff; */
 }
 
@@ -42,7 +45,7 @@ body{
 }
 
 .navbar{
-    background: var(--deep-red);
+    background: var(--turquoise);
 }
 
 .navbar-text{
@@ -65,22 +68,32 @@ navbar-brand > h1{
 }
 
 .custom-card{
-    border-color: var(--deep-red) !important;
+    border-color: var(--turquoise) !important;
 }
 
 .custom-card > .card-body{
     background-color: var(--off-white);
-    border-color: var(--deep-red) !important;
+    border-color: var(--turquoise) !important;
 }
 
 .custom-card div h5{
-    border-color: var(--deep-red) !important;
+    border-color: var(--turquoise) !important;
 }
 
 .contact{
-    background-color: var(--deep-red);
-}
-
-.contact{
+    background-color: var(--turquoise);
     color:var(--off-white);
+    width:100%
+}
+
+.contact-icon{
+    /* font-size: 4em;  */
+    color: var(--off-white);
+}
+.contact-icon .fab, .custom-icon a:visited .fab{
+    color: var(--off-white);
+}
+
+.contact-icon .fab:hover, .custom-icon .fab:focus {
+    color: var(--off-white);
 }
