@@ -5,7 +5,7 @@ class Footer extends HTMLElement {
   
     connectedCallback() {
       this.innerHTML = `
-      <footer class="contact" id="contact" style="box-shadow: 0px -4px 23px 1px #999;">
+      <footer class="contact" id="contact" style="">
     <div class="container-sm">
       <div class="row justify-content-around align-items-center">
         
