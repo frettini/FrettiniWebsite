@@ -9,13 +9,16 @@
   <link rel="stylesheet" href="../css/bootstrap.min.css" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="css/font-mfizz.css">
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css" integrity="sha512-Cdvnk1SFWqcb3An6gMyqDRH40Js8qmsWcSK10I2gSifCe2LilaPMsHd6DldEvQ3uIlCb1qdRUrNeAFFleOu4xQ==" crossorigin="anonymous" />
   <script src="https://kit.fontawesome.com/0c2bf919f0.js" crossorigin="anonymous"></script>
-  <script src="../js/header.js" type="text/javascript" defer></script>
+  <script src="../js/blog_header.js" type="text/javascript" defer></script>
   <script src="../js/contact.js" type="text/javascript" defer></script>
 </head>
 
@@ -25,14 +28,35 @@
 
   <header class="page-header pt-5 shadow">
     <div class="container">
-        <div class="row">
-            <h1  class="py-1">Title</h1>   
+        <div class="row justify-content-around align-items-center">
+          <div class="col-md-9"><h1  class="py-1">Digital Synthesizer</h1></div>
+
+          <div class="col-1"><i class="fab fa-python fa-3x"></i></div>
+          <div class="col-1 "><i class="icon-cplusplus fa-3x"></i></i></div>
+          <div class="col-1"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Qt_logo_2016.svg" alt="" style="height:64px"></i></div>
         </div>
     </div>  
   </header>
 
-  <section class="main-section pt-4">
+  <section class="main-section py-4">
+    <div class="container">
+      <div class="row gy-2 justify-content-center">
 
+        <col-md-12 class="mb-2"><iframe width="560" height="315" src="https://www.youtube.com/embed/krrwd5_X52w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></col-md-12>
+        <div class="col-md-10"> 
+          This Digital Synthesizer was a very fun project made for an Audio Programming course.
+          The synthesizer has three generators: a sine wave, a filtered noise, and noise generator. 
+          The sharpness of the filter can be controlled by the Q parameter, the attack of the note by the Envelope sliders, and the volume by the gain! <br/>
+          The synthesizer Digital Signal Processing (DSP) unit was built in C++, the UI and the MIDI keyboard interface were developed in Python. 
+          SWIG was used to interface the two parts.
+        </div>
+
+
+        <!-- <div class="col-md-6"><img src="../img/placeholder2.jpg" alt="" style="max-height: 250px;"></div> -->
+        
+        
+      </div>
+    </div>
   </section>
 
   <contact-component></contact-component>

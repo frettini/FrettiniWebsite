@@ -88,6 +88,14 @@ navbar-brand > h1{
     min-height: 70%;
 }
 
+.main-section img:not(.img-header), .main-section iframe{
+    /* width:auto; */
+    margin: auto;    
+    display: block;
+    border: 5px solid var(--turquoise);
+    border-radius: 5px;
+}
+
 /* CARDS -------------------------------------------*/
 
 .custom-card{
