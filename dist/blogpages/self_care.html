@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nicolae - Frettini</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <link rel="stylesheet" href="../css/font-mfizz.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css" integrity="sha512-Cdvnk1SFWqcb3An6gMyqDRH40Js8qmsWcSK10I2gSifCe2LilaPMsHd6DldEvQ3uIlCb1qdRUrNeAFFleOu4xQ==" crossorigin="anonymous" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
+
+
+  <script src="https://kit.fontawesome.com/0c2bf919f0.js" crossorigin="anonymous"></script>
+  <script src="../js/blog_header.js" type="text/javascript" defer></script>
+  <script src="../js/contact.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+
+  <header-component></header-component>
+
+  <header class="page-header pt-5 shadow">
+    <div class="container">
+      <div class="row justify-content-around align-items-center">
+        <div class="col-md-9"><h1  class="py-1">SelfCARE</h1></div>
+
+        <div class="col-1"><i class="fab fa-unity fa-3x"></i></div>
+        <div class="col-1 "><i class="icon-csharp fa-3x"></i></div>
+        <div class="col-1"><img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="" style="height:50px"></i></div>
+      </div>
+  </div>  
+  </header>
+
+  <section class="main-section py-4">
+    <div class="container">
+      <div class="row gy-2 justify-content-center ">
+
+        <div class="col-md-10"> 
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MuW7qreqLu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            
+        </div>
+        <div class="col-md-10 text-center">Video Credit to 5MG Channel</div>
+        <div class="col-md-10">
+          SelfCARE is the result of the 48h GUDEV Game Jam 9. It was a solo project and came in first place of the Jam! <br>
+          SelfCARE is a puzzle game where the player matches the shapes. To do so, the user clicks on a first shape and drags it to the next one.
+          In case of a mistake, the player can click on the line itself to erase it. There are 16 levels to complete and a 10 minute soundtrack to enjoy.
+          The game was built to be relaxing, calm, and polished. I kept the scope of the development very small so that I could focus on simple
+          yet effective graphics and a long single soundtrack. The game was created using the Unity engine, Photoshop, and Reaper.
+        </div>
+
+        <div class="col-md-10">
+          <b>Programming : </b> <br>
+          The goal of the game is very simple, and so is the programming behind it. There are two main parts: level generation and input control. <br>
+          A level generation was implemented in order to quickly build many levels. This was done by using a grid system. The size of the level, and
+          the location of the boy and of the shapes are then specified to place each element correctly.<br>
+          The input control looks at the location of the mouse on click. Again the grid system is used to check if the mouse within the level, on a shape
+          or on a line. The logic acts accordingly. Each shape is specified in pair, and needs to be connected to finish the level. Everytime a pair is connected,
+          the level manager is notified and checks if the level is completed. 
+        </div>
+
+        <div class="col-md-10">
+          <b>Graphics : </b> <br>
+          The graphics of the game are also basic. They were made using a large brush in Photoshop. Each animated element is drawn three times to create that 
+          sense of motion.
+        </div>
+
+        <div class="col-md-10">
+          <b>Music : </b> <br>
+          The main goal of this soundtrack is to be soothing and relaxing. It was made using recordings (from <a href="https://freesound.org/">freesounds.org</a>) 
+          of the ocean, rivers, and wind going through the trees. Interleaved with it are three piano tracks that appear at intervals. The full sound track can be 
+          is available <a href="https://www.youtube.com/watch?v=j4lK-FKe1Fs&t=2s&ab_channel=NicolaeMarton">here</a> 
+        </div>
+
+        <div class="col-md-10">
+          You can try the game yourself on <a href="https://frettini.itch.io/selfcare">itch.io</a>! The full project is on github on 
+          this <a href="https://github.com/frettini/GamJam9-SelfCARE">link.</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <contact-component></contact-component>
+
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
