@@ -92,6 +92,7 @@ navbar-brand > h1{
     /* width:auto; */
     margin: auto;    
     display: block;
+    max-width:100%;
     border: 5px solid var(--turquoise);
     border-radius: 5px;
 }
