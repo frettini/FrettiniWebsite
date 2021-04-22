@@ -29,7 +29,7 @@
   <header class="page-header pt-5 shadow">
     <div class="container">
         <div class="row justify-content-around align-items-center">
-          <div class="col-md-11 text-md-start text-center"><h1  class="py-1">Rasterization</h1></div>
+          <div class="col-md-11 text-md-start text-center"><h1  class="py-1">Rasterization Pipeline</h1></div>
 
           <div class="col-1"><h2  class="py-1"><b>HLSL</b></h2></div>
         </div>
@@ -38,9 +38,58 @@
 
   <section class="main-section py-4">
     <div class="container">
-      <div class="row gy-2 justify-content-center text-center">
+      <div class="row gy-4 justify-content-center ">
         
+        <div class="col-md-10 text-center">
+          This work was done as part of a Computer Graphics course, also check out my work on <a href="#">Ray Tracing</a> and <a href="#">Path Tracing</a>.
+        </div>
+
+        <div class="col-md-10"><img class="img-fluid" src="./img/graphic_pipelines/rast01.jpg" alt="" style="max-height: 350px;"></div>
         
+        <div class="col-md-10">
+          Rasterization is the most common method used for video games. It is the most efficient way of rendering a 3D scene to a screen.
+          However it doesn't follow approximates physics of light like ray tracing does. <br/>
+
+          The rasterization pipeline will usually contain the following steps, which were implemented in this project: <br/>
+          <ul>
+            <li>Projection: Convert coordinates from World Space to Camera Space to Screen Space (Transformation Matrices).</li>
+            <li>Clipping: Remove points outside of the frustrum and generate new geometry (Sutherland-Hodgman Algorithm).</li>
+            <li>Culling: Do not render faces that face away from the camera.</li>
+            <li>Rasterization: determine the color of each pixel (Half-space testing).</li>
+            <li>z-Buffering: determine if the face is occluded by an object in front of it (z-buffering).</li>
+            <li>Shading: determine the color of the triangles (Barycentric Coordinates).</li>
+          </ul>
+          More advanced pipelines also include lighting and texturing (maybe in the next episode!).
+        </div>
+
+        
+        <div class="col-md-10 text-center">
+          <img class="img-fluid" src="./img/graphic_pipelines/rast02.jpg" alt="" style="max-height: 250px;">
+          <small>
+            Figure 2: Rasterized scene without clipping, z-Buffering and shading.
+          </small> 
+        </div>
+
+        <div class="col-md-10">
+          Figure 2 shows an intermediary step where only the projection, culling and rasterization were implemented. 
+          Clipping enables optimization, but the triangle's geometry is modified to fit the boundary using the Sutherland-Hogman Algorithm.
+          The algorithm checks if an edge is inside, outside, entering or leaving the frustrum, and adds a vertex accordingly. 
+        </div>
+
+        <div class="col-md-10 text-center">
+          <img class="img-fluid" src="./img/graphic_pipelines/rast03.gif" alt="" style="max-height: 250px;">
+          <small>
+            Figure 3: Rasterized scene demonstrating culling.
+          </small> 
+        </div>
+        
+        <div class="col-md-10">
+          Figure 3 demonstrates culling. Back faces are determined by the order of the vertices. Faces with anticlockwise orders
+          are not rendered.
+        </div>
+
+
+
       </div>
     </div>
   </section>
