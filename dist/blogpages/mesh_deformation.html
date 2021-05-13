@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nicolae - Frettini</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="../css/font-mfizz.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css" integrity="sha512-Cdvnk1SFWqcb3An6gMyqDRH40Js8qmsWcSK10I2gSifCe2LilaPMsHd6DldEvQ3uIlCb1qdRUrNeAFFleOu4xQ==" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/0c2bf919f0.js" crossorigin="anonymous"></script>
+
+  <!-- templates -->
+  <script src="../js/blog_header.js" type="text/javascript" defer></script>
+  <script src="../js/contact.js" type="text/javascript" defer></script>
+
+  <!-- math plugin -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+  <header-component></header-component>
+
+  <header class="page-header pt-5 shadow">
+    <div class="container">
+        <div class="row justify-content-around align-items-center">
+          <div class="col-md-11 text-md-start text-center"><h1  class="py-1">Mesh Deformation and Animation</h1></div>
+
+          <div class="col-1"><i class="fab fa-python fa-3x"></i></div>
+        </div>
+    </div>  
+  </header>
+
+  <section class="main-section py-4">
+    <div class="container">
+        <div class="row gy-4 justify-content-center ">
+          
+          <div class="col-md-10 text-center">
+            This project was made with .. as part of a team project for the Acquisition and Processing of 3D Geometry module at UCL. 
+          </div>
+
+          <div class="col-md-10">
+            <img class="img-fluid" src="./img/mesh_processing/armadillo_deform.jpg" alt="" style="margin-bottom: 0.5rem; max-height: 350px;">
+            <img class="img-fluid" src="./img/mesh_processing/bunny_deform.jpg" alt="" style="margin-bottom: 0.5rem; max-height: 350px;">
+            <img class="img-fluid" src="./img/mesh_processing/cube.jpg" alt="" style="max-height: 350px;">
+          </div>
+          
+          <div class="col-md-10">
+            This project implements the As-Rigid-As-Possible (ARAP) mesh deformation method presented by <a href="https://igl.ethz.ch/projects/ARAP/">Sorkine and Alexa (2007)</a>.
+            This framework tries to minimize non rigid transformations between overlaping cells of the mesh. Mathematically, it translates to minimizing the following equation:
+            
+            \[E(S') = \sum_i^{n} \sum_{j \in N(i)} w_{ij} || (\mathbf{p}_i^{'}-\mathbf{p}_j^{'}) - \mathbf{R}_i (\mathbf{p}_i - \mathbf{p}_j) ||^{2} .\]
+
+            Where prime indicates deformed mesh variables, \(\mathbf{p}\) are the vertices positions and \(\mathbf{R}_i\) are the rotations between the cells.
+            It is a bit of a mouthfull but for every vertex, we try to minimize its one-ring neighbor deformation. ARAP divides this problem
+            in two steps: find the deformed mesh position, and find the correct rotation. This makes the algorithm rotation invariant and very  
+            to implement. It's main limitation is that it does not scale well to large meshes. I won't go in more details here but make sure to read the paper
+            for the full description!
+          </div>
+    
+          <div class="col-md-5">
+            <img class="img-fluid" src="./img/mesh_processing/UI_vertices.png" alt="" style=" max-height: 350px;">
+          </div>
+
+          <div class="col-md-5">
+            <img class="img-fluid" src="./img/mesh_processing/raycast.png" alt="" style=" max-height: 350px;">
+          </div>
+
+          <div class="col-md-10">
+            We also developed a User Interface (UI) which enables the user to interact and deform the mesh. We extended the pyrender Viewer class 
+            to enable vertex selection through mesh traversal. The couloured vertices you see here represent the fixed vertices and handles the 
+            user can move. The first iterations of our project used keys to traverse the mesh, which can be a tedious. I further extended our UI
+            to include a raycast system which enables the user to select vertices using the mouse.
+          </div>
+
+          <div class="col-md-10">
+            Once we had both an operational deformation algorithm and UI, we were only one step away from creating our own animations! All credit 
+            is given to .. here, as she devised a way to record and interpolate between vertex positions and run the deformation for all those poses.
+            Here are some of the results:
+          </div>
+
+          <div class="col-md-5">
+            <img class="img-fluid" src="./img/mesh_processing/anim01.gif" alt="" style=" max-height: 350px;">
+          </div>
+
+          <div class="col-md-5">
+            <img class="img-fluid" src="./img/mesh_processing/anim02.gif" alt="" style=" max-height: 350px;">
+          </div>
+
+
+        </div>
+    </div>
+  </section>
+
+  <contact-component></contact-component>
+
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
